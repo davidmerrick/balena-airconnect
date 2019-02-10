@@ -1,0 +1,5 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine
+
+COPY ./bin/airupnp-arm /bin/airupnp-arm
+
+CMD ["/bin/airupnp-arm"]
