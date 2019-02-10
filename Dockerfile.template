@@ -1,6 +1,8 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine
+FROM balenalib/%%BALENA_MACHINE_NAME%%-jessie-build
 
 COPY ./bin/airupnp-arm /bin/airupnp-arm
 RUN chmod +x /bin/airupnp-arm
+RUN apt-get update
+RUN apt-get install -y libssl1.0.0 libssl-dev
 
 CMD ["/bin/airupnp-arm"]
