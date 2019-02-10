@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-jessie-build
+FROM balenalib/%%BALENA_MACHINE_NAME%%-ubuntu
 
 COPY ./bin/airupnp-arm /bin/airupnp-arm
 RUN chmod +x /bin/airupnp-arm
